@@ -1,0 +1,317 @@
+<?xml version="1.0" ?>
+<!-- This spellcast created by Greg "Lunaretic" Scott, contact me on Shiva or FFXIAH anytime if you want some help with this. -->
+
+	<!-- Start of the actual Spellcast XML information -->
+	<spellcast>
+
+		<!-- Config, useful for debugging, etc. -->
+		<config
+			HideErrors="false"
+			Debug="false"
+			ShowSpellInfo="false"
+			ShowGearSwaps="false"
+		/>
+	
+	<!-- Variables, these include all of our staves, our preferred  Maximum TP % to switch staves in, and timeframe to cancel shadows when casting Utsusemi Ichi-->
+	<variables> 
+		<var name="DarkStaff">Dark Staff</var>
+		<var name="LightStaff">Light Staff</var>
+		<var name="FireStaff">Fire Staff</var>
+		<var name="EarthStaff">Earth Staff</var>
+		<var name="WindStaff">Wind Staff</var>
+		<var name="WaterStaff">Water Staff</var>
+		<var name="IceStaff">Ice Staff</var>
+		<var name="ThunderStaff">Thunder Staff</var>
+		<var name="LockTP">20</var>
+		<var name="IchiTime">3.1</var>
+	</variables>
+ 
+	<!-- Sets, these are all our different groups of equipment swaps -->
+	<sets>
+	
+		<!-- This XML only uses one group, titled 'BLU'.  I prefer to use multiple XMLs rather than multiple groups to reduce overhead -->
+		<group name="BLU" Default="yes">
+			
+			<!-- Idling/Town gear keep max MP/HP conservation in mind with what you have in your other sets -->
+			<set name="Idle">
+					<main>Perdu Hanger</main>
+					<sub>Acheron Shield</sub>
+					<head>Lilac Corsage</head>
+					<body>Scp. Harness +1</body>
+					<waist>Virtuoso Belt</waist>
+					<legs>Mirage Shalwar</legs>
+					<neck>Spectacles</neck>
+					<lear>Minuet Earring</lear>
+					<rear>Antivenom Earring</rear>
+					<rring>Rajas Ring</rring>
+					<lring>Jaeger Ring</lring>
+					<hands>Mirage Bazubands</hands>
+					<feet>Magus Charuqs</feet>
+					<back>Amemet Mantle +1</back>
+			</set>
+			
+			<!-- TPing /Standard combat set.  Evasion for a soloing XML, Haste/Acc for a party XML, +HP for a Breath Attacks XML -->
+			<set name="Standard">
+					<main>Perdu Hanger</main>
+					<sub>Acheron Shield</sub>
+					<head>Walahra Turban</head>
+					<hands>Dusk Gloves</hands>
+					<body>Scp. Harness +1</body>
+					<waist>Virtuoso Belt</waist>
+					<legs>Mirage Shalwar</legs>
+					<neck>Spectacles</neck>
+					<lear>Minuet Earring</lear>
+					<rear>Spike Earring</rear>
+					<rring>Rajas Ring</rring>
+					<lring>Jaeger Ring</lring>
+					<feet>Dusk Ledelsens</feet>
+					<back>Amemet Mantle +1</back>
+			</set>
+			
+			<!-- Generic Weapon Skill gear, could make sets for specific Weapon Skills -->
+			<set name="WeaponSkill" BaseSet="Standard">
+				<hands>Pallas's Bracelets</hands>
+				<feet>Dusk Ledelsens</feet>
+				<neck>Spike Necklace</neck>
+				<head>Wivre Mask</head>
+				<body>Scp. Harness +1</body>
+				<rear>Spike Necklace</rear>
+				<waist>Warwolf Belt</waist>
+			</set>
+			
+			<!-- Blue mage AF or AF+1 body -->
+			<set name="BluSkill">
+				<body>Magus Jubbah</body>
+			</set>
+			
+			<!-- Haste/Minus Interrupt/Evasion gear for Utsusemi recast -->
+			<set name="Utsu" Baseset="Standard">
+				<head>Walahra Turban</head>
+				<legs>Magus Shalwar</legs>
+				<hands>Dusk Gloves</hands>
+				<feet>Dusk Ledelsens</feet>
+			</set>
+			
+			<!-- Physical debuff spell gear, haste + accuracy, very similar to TP gear generally -->
+			<set name="PhysDebuff" BaseSet="Standard">
+				<head>Walahra Turban</head>
+				<body>Scp. Harness +1</body>
+				<neck>Spectacles</neck>
+				<waist>Virtuoso Belt</waist>
+				<legs>Mirage Shalwar</legs>
+				<hands>Dusk Gloves</hands>
+				<feet>Dusk Ledelsens</feet>
+			</set>
+			
+			<!-- Multi-hit physical spell gear, Disseverment, Frenetic Rip, Hysteric Barrage. -->
+			<set name="MultiHits" BaseSet="Standard">
+				<head>Wivre Mask</head>
+				<body>Magus Jubbah</body>
+				<neck>Spike Necklace</neck>
+				<waist>Warwolf Belt</waist>
+				<feet>Bounding Boots</feet>
+				<hands>Mirage Bazubands</hands>
+				<lring>Ruby Ring</lring>
+				<rring>Rajas Ring</rring>
+			</set>
+			
+			<!-- Single-hit physical spell gear, Vertical Cleave, Spinal Cleave, Ram Charge, Death Scissors. -->
+			<set name="SingleHits" BaseSet="Standard">
+				<head>Wivre Mask</head>
+				<body>Magus Jubbah</body>
+				<neck>Spike Necklace</neck>
+				<waist>Warwolf Belt</waist>
+				<feet>Bounding Boots</feet>
+				<hands>Pallas's Bracelets</hands>
+				<lring>Ruby Ring</lring>
+				<rring>Rajas Ring</rring>
+			</set>
+			
+			<!-- Cannonball set, STR/VIT/Defense/Blue Magic Skill -->
+			<set name="Cannonball" BaseSet="Standard">
+				<hands>Pallas's Bracelets</hands>
+				<head>Wivre Mask</head>
+				<body>Magus Jubbah</body>
+				<neck>Spike Necklace</neck>
+				<waist>Warwolf Belt</waist>
+				<lring>Ruby Ring</lring>
+				<rring>Rajas Ring</rring>
+			</set>
+			
+			<!-- Breath Spell set, +HP +Magical Accuracy gear.  Note that Breath Spells are based off CURRENT HP, not MAX HP. -->
+			<set name="HPBreath" BaseSet="Standard">
+				<head>Walahra Turban</head>
+				<body>Scp.Harness +1</body>
+				<legs>Mirage Shalwar</legs>
+				<back>Rainbow Cape</back>
+				<hands>Dusk Gloves</hands>
+				<waist>Virtuoso Belt</waist>
+				<feet>Dusk Ledelsens</feet>
+			</set>
+			
+			<!-- Intelligence set, for Blue Magic INT based spells -->
+			<set name="MagicalINT" BaseSet="Standard">
+				<head>Magus Keffiyeh</head>
+				<body>Magus Jubbah</body>
+				<hands>Errant Cuffs</hands>
+				<lring>Diamond Ring</lring>
+				<rring>Diamond Ring</rring>
+				<legs>Errant Slops</legs>
+				<feet>River Gaiters</feet>
+				<waist>Penitent's Rope</waist>
+				<back>Rainbow Cape</back>
+			</set>
+			
+			<!-- Mind set, for blue magic MND based spells -->
+			<set name="MagicalMND" BaseSet="MagicalINT">
+				<hands>Mirage Bazubands</hands>
+				<lring>Sapphire Ring</lring>
+				<rring>Sapphire Ring</rring>
+			</set>
+			
+			<!-- Charisma set, for blue magic CHR based spells -->
+			<set name="MagicalCHR" BaseSet="MagicalINT">
+			</set>
+			
+			<!-- Mind set, for non-Blue Magic Skill using MND based spells -->
+			<set name="SkillessMND" BaseSet="MagicalMND">
+				<body>Errant Houppelande</body>
+			</set>
+			
+			<!-- Intelligence set, for non-Blue Magic Skill using  INT based spells -->
+			<set name="SkillessINT" BaseSet="MagicalINT">
+				<body>Errant Houppelande</body>
+			</set>
+			
+			<!-- Resting gear, HMP, MP, Refresh, HP -->
+			<set name="Resting">
+				<main>$DarkStaff</main>
+				<sub>Raptor Strap +1</sub>	
+				<body>Errant Houppelande</body>
+				<waist>Qiqirn Sash +1</waist>
+				<head>Cobra Hat</head>
+				<neck>Beak Necklace +1</neck>
+				<rear>Antivenom Earring</rear>
+			</set>
+			
+			<!-- Automatic elemental staff set, include your preferred grip -->
+			<set name="EStaff">
+				<main>$%SpellElementStaff</main>
+				<sub>Raptor Strap +1</sub>	
+			</set>
+		</group>
+	</sets>
+	
+	
+	
+	<!-- Rules section, this determines when to swap gear sets and what to swap to -->
+	<rules>
+	
+		<!-- Autosets -->
+		<action type="equip" when="idle" set="Idle" />
+		<action type="equip" when="engaged" set="Standard" />
+		<action type="equip" when="resting" set="Resting" />
+		
+		<!-- TP Locking/Unlocking, note that your weapons will actually lock at LockTP +1 -->
+		<if TPGT="$LockTP">
+			<action type="Disable" Slot="Main|Sub|Ranged" />
+		</if>
+		<else>
+			<action type="Enable" Slot="Main|Sub|Ranged" />
+		</else>
+			
+		<!-- This is the beginning of the main if/elseif segment.  This includes segments Weaponskills, Blue Magic, Ninujtsu, and Other Magic. -->
+		<if CommandPrefix="/ws|/weaponskill"> <!-- Weapon Skill gear, this could be broken down for individual weapon skills later -->
+				<action type="equip" when="precast" set="WeaponSkill" />
+		</if>
+		
+		<!-- Blue Magic spells, the majority of the rules are in this segment -->
+		<elseif Skill="BlueMagic"> 
+			<if spell="Head Butt|Sub-Zero Smash|Sprout Smack|Frypan"> <!-- Physical debuffs/stuns, accuracy + haste is the name of the game -->
+				<action type="equip" when="midcast" set="PhysDebuff" />
+			</if>
+			<elseif spell="Fren*|Hysteric*|Diss*"> <!-- Multi-Hits, need lots of accuracy and usually DEX is a mod -->
+				<action type="equip" when="midcast" set="MultiHits" />
+			</elseif>
+			<elseif spell="Vertical*|Spinal*|Ram*|Death*"> <!-- Single hits, these don't need DEX or as much accuracy generally -->
+				<action type="equip" when="midcast" set="SingleHits" />
+			</elseif>
+			<elseif spell="Cannonball"> <!-- Cannonball has a unique set of mods/etc. -->
+				<action type="equip" when="midcast" set="Cannonball" />
+			</elseif>
+			<else> <!--Magical Nukes/Debuffs/Etc. -->
+				<if ValidTarget="self"> <!-- Self Target only spells, i.e. Diamondhide.  Some of these use Blue Magic skill as their only modifier -->
+					<action type="equip" when="midcast" set="BluSkill" />
+				</if>
+				<else> <!-- Non-Self Target spells -->
+					<if spell="Sheep*|Magic Hammer|Blank*|Yawn"> <!-- Enemy target Mind spells, Use AF Body for accuracy -->
+						<action type="equip" when="midcast" set="MagicalMND" />
+					</if>
+					<elseif spell="Wild Carrot|Pollen|Magic Fruit"> <!-- Ally target Mind spells, use EBody for +MND -->
+						<action type="equip" when="midcast" set="SkillessMND" />
+					</elseif>
+					<elseif spell="*Breath"> <!-- HP breath stuff, to make sure we don't swap in -HP magical items, still want AF Body for Magic Accuracy -->
+						<action type="equip" when="midcast" set="HPBreath" />
+					</elseif>
+					<else> <!-- All INT based spells are enemy target, so use AF body for accuracy -->
+						<action type="equip" when="midcast" set="MagicalINT" />
+					</else>
+					
+					<!--  Use an elemental staff regardless of spell if it's magical and not one of the self-buffs -->
+					<action type="equip" when="midcast" set="EStaff" />
+				</else>
+			</else>
+			
+			<!-- Reset our gear after we're done with our actions.  There are two copies of this segment as the bottom one fails consistently on blue magic for some reason. -->
+			<if status="engaged"> 
+				<action type="equip" when="aftercast" set="Standard" />
+			</if>
+			<else>
+				<action type="equip" when="aftercast" set="Idle" />
+			</else>
+			
+		</elseif> <!-- End of Blue Magic rules -->
+		
+		<!-- Ninjutsu is out here because it was throwing errors when used with the /ma area -->
+		<elseif Skill="Ninjutsu">
+		
+			<if spell="Utsu*"> <!-- Utsusemi, Haste, Fast Cast, Evasion, Interrupt Down -->
+				
+				<action type="equip" when="precast" set="Utsu" />
+				
+				<if spell="*Ichi">
+					<!-- Cancel shadows just before the cast goes off with ichi.  This timer needs to be tweaked based on Fast Cast and Internet Connection Speed.  -->
+					<action type="midcastdelay" delay="$IchiTime" />
+					<action type="Command" when="midcast">cancel 66</action>
+			</if>
+			
+			<elseif spell="Mono*"> <!-- Sneak cancel, done fairly early so it doesn't need to be tweaked for Fast Cast -->
+				<action type="command" when="midcast">cancel 71</action>
+				<action type="midcastdelay" delay="2.0" />
+			</elseif>
+		
+		</elseif> <!-- End of Ninjutsu Rules -->
+		
+		<!-- Non Blue-Magic spells, I.E. sub scholar stuff -->
+		<elseif CommandPrefix="/ma|/magic"> 		
+			<if spell="Aspir|Drain|Sleep|Dispel"> <!-- INT based spells, we don't need AF body for this as it's not blue magic -->
+					<action type="equip" when="midcast" set="SkillessINT" />
+					<action type="equip" when="midcast" set="EStaff" />
+			</if>
+
+			<elseif spell="Cure*"> <!-- MND based spells(Cures), we don't need AF body for this as it's not blue magic -->
+					<action type="equip" when="midcast" set="SkillessMND" />
+					<action type="equip" when="midcast" set="EStaff" />
+			</elseif>
+
+		</elseif> <!-- End of Other Magic rules -->
+		
+		<if status="engaged"> <!-- Reset our gear after we're done with our actions -->
+			<action type="equip" when="aftercast" set="Standard" />
+		</if>
+		<else>
+			<action type="equip" when="aftercast" set="Idle" />
+		</else>
+	
+	</rules>
+</spellcast>

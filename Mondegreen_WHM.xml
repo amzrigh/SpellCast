@@ -1,0 +1,246 @@
+<?xml version="1.0" ?>
+<spellcast>
+	<config
+		HideError="false"
+		Debug="false"
+		ShowSpellInfo="false"
+	/>
+<!--if names are Element="", Skill="", Type="",ValidTarget="" MPCostGT/LT="", RecastGT/LT="", CastTimeGT/LT="", -->
+	<variables>
+		<var name="LightStaff">Apollo's Staff</var>
+		<var name="DarkStaff">Pluto's Staff</var>
+		<var name="EarthStaff">Terra's Staff</var>
+		<var name="WaterStaff">Neptune's Staff</var>
+		<var name="WindStaff">Auster's Staff</var>
+		<var name="FireStaff">Vulcan's Staff</var>
+		<var name="IceStaff">Aquilo's Staff</var>
+		<var name="ThunderStaff">Jupiter's Staff</var>
+	</variables>
+	<sets>
+		<!--<group default="Yes" name="Standard|Solo">
+			<set name="Standard|Idle">
+				<main>Earth Staff</main>
+				<sub>Raptor Strap +1</sub>
+				<ammo>Morion Tathlum</ammo>
+				<head>Warlock's Chapeau</head>
+				<neck>Holy Phial</neck>
+				<lear>Antivenom Earring</lear>
+				<rear>Morion Earring</rear>
+				<body>Warlock's Tabard</body>
+				<hands>Warlock's Gloves</hands>
+				<lring>Ether Ring</lring>
+				<rring>Saintly Ring</rring>
+				<back>Red Cape +1</back>
+				<waist>Penitent's Rope</waist>
+				<legs>Warlock's Tights</legs>
+				<feet>Warlock's Boots</feet>
+			</set>
+			<set name="Engaged" BaseSet="Standard">
+				<main>Royal Guard's Fleuret</main>
+				<sub>Balance Buckler</sub>
+				<rring>Courage Ring</rring>
+			</set>
+			<set name="Resting" BaseSet="Standard">
+				<main>$DarkStaff</main>
+				<waist>Reverend Sash</waist>
+				<!--<body>Errant Hpl.</body>
+				<rear>Antivenom Earring</rear>
+				<waist>Qiqirn Sash</waist>
+				<neck>Grandiose Chain</neck>
+				<back>Invigorating Cape</back>
+			</set>
+			<set name="Max-INT" BaseSet="Standard">
+				<neck>Black Neckerchief</neck>
+				<lring>Eremite's Ring</lring>
+				<rring>Eremite's Ring</rring>
+			</set>
+			<set name="Max-MND" BaseSet="Standard">
+				<lring>Saintly Ring</lring>
+				<rring>Saintly Ring</rring>
+			</set>
+			<set name="Enfeebling-INT" BaseSet="Max-INT">
+			</set>
+			<set name="Enfeebling-MND" BaseSet="Max-MND">
+			</set>
+			<set name="Elemental" BaseSet="Max-INT">
+				<body>Glamor Jupon</body>
+				<lear>Moldavite Earring</lear>
+			</set>
+			<set name="Enhancing" BaseSet="Max-MND">
+				<body>Glamor Jupon</body>
+			</set>
+			<set name="Dark" BaseSet="Max-INT">
+				<main>$DarkStaff</main>
+				<body>Glamor Jupon</body>
+			</set>
+			<set name="Healing" BaseSet="Max-MND">
+				<main>$LightStaff</main>
+			</set>
+			<set name="Divine" BaseSet="Max-MND">
+				<main>$LightStaff</main>
+				<lear>Moldavate Earring</lear>
+			</set>
+		</group>-->
+		<group default="Yes" name="Default">
+			<set name="Standard|Idle">
+				<sub>Raptor Strap +1</sub>
+				<main>$EarthStaff</main>
+				<!--<sub>Frost Shield</sub>-->
+				<ammo>Morion Tathlum</ammo>
+				<head>Healer's Cap</head>
+				<neck>Holy Phial</neck>
+				<lear>Morion Earring</lear>
+				<rear>Antivenom Earring</rear>
+				<body>Bishop's Robe</body>
+				<hands>Mycophile Cuffs</hands>
+				<lring>Ether Ring</lring>
+				<rring>Hale Ring</rring>
+				<back>Red Cape +1</back>
+				<waist>Reverend Sash</waist>
+				<legs>Healer's Pantaloons</legs>
+				<feet>Healer's Duckbills</feet>
+			</set>
+			<set name="Engaged" BaseSet="Standard">
+				<main>Blessed Hammer</main>
+				<sub>Frost Shield</sub>
+				<!--<body>Warlock's Tabard</body>
+				<head>Warlock's Chapeau</head>
+				<feet>Warlock's Boots</feet>
+				<hands>Warlock's Gloves</hands>-->
+				<!--<lring>Bastokan Ring</lring>
+				<rring>Courage Ring</rring>-->
+			</set>
+			<set name="Resting" BaseSet="Standard">
+				<main>$DarkStaff</main>
+				<waist>Reverend Sash</waist>
+				<rear>Antivenom Earring</rear>
+				<!--<body>Errant Hpl.</body>
+				<waist>Qiqirn Sash</waist>
+				<neck>Grandiose Chain</neck>
+				<back>Invigorating Cape</back>-->
+			</set>
+			<!--<set name="FastCast"  BaseSet="Standard">
+				<head>Wlk. Chapeau +1</head>
+				<body>Duelist's Tabard</body>
+				<rear>Loquac. Earring</rear>
+			</set>-->
+			<!--<set name="Enfeebling" BaseSet="Standard">
+				<head>Duelist's Chapeau</head>
+				<neck>Enfeebling Torque</neck>
+				<body>Warlock Tabard</body>
+				<rring>Tamas Ring</rring>
+				<hands>Duelist's Gloves</hands>
+				<back>Altruistic Cape</back>
+				<legs>Nashira Seraweels</legs>
+			</set>-->
+			<set name="Casting" BaseSet="Standard">
+				<main>Solid Wand</main>
+				<!--<sub>Pelte</sub>
+				<!--<head>Warlock's Chapeau</head>
+				<body>Warlock's Tabard</body>-->
+			</set>
+			<set name="Max-INT" BaseSet="Casting">
+				<!--<neck>Black Silk Neckerchief</neck>
+				<hands>Linen Cuffs</hands>
+				<lring>Eremite's Ring</lring>
+				<rring>Eremite's Ring</rring>-->
+			</set>
+			<set name="Max-MND" BaseSet="Casting">
+				<lring>Saintly Ring</lring>
+				<rring>Hale Ring</rring>
+			</set>
+			<set name="Enfeebling-INT" BaseSet="Max-INT">
+			</set>
+			<set name="Enfeebling-MND" BaseSet="Max-MND">
+			</set>
+			<set name="Elemental" BaseSet="Max-INT">
+				<!--<head>Warlock's Chapeau</head>
+				<body>Glamor Jupon</body>
+				<hands>Zenith Mitts</hands>
+				<lring>Eremite's Ring</lring>
+				<rring>Eremite's Ring</rring>
+				<legs>Duelist's Tights</legs>
+				<neck>Elemental Torque</neck>
+				<lear>Moldavite Earring</lear>
+				<back>Prism Cape</back>-->
+			</set>
+			<set name="Enhancing" BaseSet="Max-MND">
+				<!--<body>Glamor Jupon</body>-->
+			</set>
+			<set name="Dark" BaseSet="Max-INT">
+				<main>$DarkStaff</main>
+				<!--<sub>Raptor Strap +1</sub>
+				<body>Glamor Jupon</body>-->
+			</set>
+			<set name="Healing" BaseSet="Max-MND">
+				<main>$LightStaff</main>
+				<!--<sub>Raptor Strap +1</sub>-->
+			</set>
+			<set name="Divine" BaseSet="Max-MND">
+				<main>$LightStaff</main>
+				<!--<sub>Raptor Strap +1</sub>
+				<lear>Moldavaite Earring</lear>-->
+			</set>
+		</group>	
+	</sets>
+	<rules>
+		<action type="equip" when="resting" set="Resting" />
+		<action type="equip" when="idle" set="Standard" />
+		<action type="equip" when="engaged" set="Engaged">
+			<body lock="t" />
+			<hands lock="t" />
+			<feet lock="t" />
+		</action>
+		<if TPGT="25">
+			<action type="Disable" Slot="Main|Sub|Ranged" />
+		</if>
+		<else>
+			<action type="Enable" Slot="Main|Sub|Ranged" />
+		</else>
+		<if advanced='%MP&gt;%MPMax-30 AND "%EquipLRing"="Ether ring"'>
+			<action type="equip" when="precast|midcast">
+				<lring lock="t" />
+			</action>
+		</if>
+		<if Skill="Elemental*">
+			<action type="equip" when="precast" set="Elemental" />
+			<action type="equip" when="precast">
+				<main>$%SpellElementStaff</main>
+				<!--<sub>Raptor Strap +1</sub>-->
+			</action>
+		</if>
+		<if Skill="Enfeeb*">
+			<if type="BlackMagic">
+				<action type="equip" when="precast" set="Enfeebling-INT" />
+			</if>
+			<elseif type="WhiteMagic">
+				<action type="equip" when="precast" set="Enfeebling-MND" />
+			</elseif>
+			<action type="equip" when="precast">
+				<main>$%SpellElementStaff</main>
+				<!--<sub>Raptor Strap +1</sub>-->
+			</action>
+		</if>
+		<if Skill="Enhancing*">
+			<action type="equip" when="precast" set="Enhancing" />
+			<action type="equip" when="precast">
+				<main>$%SpellElementStaff</main>
+				<!--<sub>Raptor Strap +1</sub>-->
+			</action>
+		</if>
+		<if Skill="Dark*">
+			<action type="equip" when="precast" set="Dark" />
+		</if>
+		<if Skill="Healing*">
+			<action type="equip" when="precast" set="Healing" />
+		</if>
+		<if Skill="Divine*">
+			<action type="equip" when="precast" set="Divine" />
+		</if>
+		<if Spell="Sneak" BuffActive="Sneak" advanced='"%SpellTargetName"="%PlayerName"'>
+			<action type="command" when="midcast">cancel 71</action>
+			<action type="midcastdelay" delay="2" />
+		</if>
+		<action type="equip" when="aftercast" set="%Status" />
+	</rules>
+</spellcast>

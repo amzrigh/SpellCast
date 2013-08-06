@@ -1,0 +1,17 @@
+[3:01:43 PM] 4600:<0> SPELLCAST::INIT - Version 2.22 
+[3:01:43 PM] 4600:<0> Loading filename: Default.xml
+[3:01:43 PM] 4600:<0> ================ USER XML ================
+<?xml version="1.0"?>
+<SPELLCAST>
+<CONFIG AUTOLOADXML="true" />
+<VARIABLES />
+<SETS />
+<RULES />
+</SPELLCAST>
+
+==========================================
+[3:01:43 PM] 4600:<0> Valid XML. Checking for Validity
+[3:01:43 PM] 4600:<0> Documented Default.xml loaded successfully!
+[3:01:43 PM] 4600:<0> AutoLoadXML: True
+[3:01:43 PM] 4600:<0> Checking for Required Version
+[3:01:43 PM] 4600:<0> Writing to Console: SpellCast: Default.xml Loaded Successfully
