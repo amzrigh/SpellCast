@@ -1,11 +1,14 @@
-[6:01:09 PM] 7412:<8034> Loading filename: Mondegreen/RDM_BLM.xml
-[6:01:09 PM] 7412:<0> Checking: Mondegreen/RDM
-[6:01:09 PM] 7412:<0> Loading filename: Mondegreen/RDM.xml
-[6:01:09 PM] 7412:<0> Checking: Mondegreen_RDM_BLM
-[6:01:09 PM] 7412:<0> Loading filename: Mondegreen_RDM_BLM.xml
-[6:01:09 PM] 7412:<0> Checking: Mondegreen_RDM
-[6:01:09 PM] 7412:<0> Loading filename: Mondegreen_RDM.xml
-[6:01:09 PM] 7412:<0> Valid XML. Checking for Validity
-[6:01:09 PM] 7412:<0> Documented Mondegreen_RDM.xml loaded successfully!
-[6:01:09 PM] 7412:<0> Checking for Required Version
-[6:01:09 PM] 7412:<0> Writing to Console: SpellCast: Mondegreen_RDM.xml Loaded Successfully
+[7:48:47 PM] 7324:<0> SPELLCAST::INIT - Version 2.51 
+[7:48:47 PM] 7324:<0> Attempting to auto load XML.
+[7:48:47 PM] 7324:<0> Checking: Mondegreen/RDM_BLM
+[7:48:47 PM] 7324:<0> Loading filename: Mondegreen/RDM_BLM.xml
+[7:48:47 PM] 7324:<0> Checking: Mondegreen/RDM
+[7:48:47 PM] 7324:<0> Loading filename: Mondegreen/RDM.xml
+[7:48:47 PM] 7324:<0> Checking: Mondegreen_RDM_BLM
+[7:48:47 PM] 7324:<0> Loading filename: Mondegreen_RDM_BLM.xml
+[7:48:47 PM] 7324:<0> Checking: Mondegreen_RDM
+[7:48:47 PM] 7324:<0> Loading filename: Mondegreen_RDM.xml
+[7:48:47 PM] 7324:<0> Valid XML. Checking for Validity
+[7:48:47 PM] 7324:<0> Documented Mondegreen_RDM.xml loaded successfully!
+[7:48:47 PM] 7324:<0> Checking for Required Version
+[7:48:47 PM] 7324:<0> Writing to Console: SpellCast: Mondegreen_RDM.xml Loaded Successfully
