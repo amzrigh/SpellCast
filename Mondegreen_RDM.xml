@@ -83,8 +83,8 @@
 		</group>-->
 		<group default="Yes" name="Default">
 			<set name="Standard|Idle">
-				<sub>Raptor Strap +1</sub>
 				<main>$EarthStaff</main>
+				<sub>Raptor Strap +1</sub>
 				<ammo>Phantom Tathlum</ammo>
 				<head>Duelist's Chapeau</head>
 				<neck>Holy Phial</neck>
@@ -100,7 +100,6 @@
 				<feet>Sapientia Sabots</feet>
 			</set>
 			<set name="Engaged" BaseSet="Standard">
-				<head>Warlock's Chapeau</head>
 				<main>Firmament</main>
 				<sub>Bloom Buckler</sub>
 				<feet>Duelist's Boots</feet>
@@ -108,6 +107,7 @@
 				<back>Potentia Cape</back>
 				<rear>Suppanomimi</rear>
 				<body>Augur's Jaseran</body>
+				<back>Potentia Cape</back>
 			</set>
 			<set name="Resting" BaseSet="Standard">
 				<main>$DarkStaff</main>
@@ -115,16 +115,12 @@
 				<lear>Antivenom Earring</lear>
 				<rring>Star Ring</rring>
 				<ammo>Clarus Stone</ammo>
-				<!--<body>Errant Hpl.</body>
-				<waist>Qiqirn Sash</waist>
-				<neck>Grandiose Chain</neck>
-				<back>Invigorating Cape</back>-->
 			</set>
-			<!--<set name="FastCast"  BaseSet="Standard">
-				<head>Wlk. Chapeau +1</head>
+			<set name="FastCast"  BaseSet="Standard">
+				<head>Warlock's Chapeau</head>
 				<body>Duelist's Tabard</body>
-				<rear>Loquac. Earring</rear>
-			</set>-->
+				<feet>Augur's Gaiters</feet>
+			</set>
 			<!--<set name="Enfeebling" BaseSet="Standard">
 				<head>Duelist's Chapeau</head>
 				<neck>Enfeebling Torque</neck>
@@ -134,8 +130,7 @@
 				<back>Altruistic Cape</back>
 				<legs>Nashira Seraweels</legs>
 			</set>-->
-			<set name="Casting" BaseSet="Standard">
-				<head>Warlock's Chapeau</head>
+			<set name="Casting" BaseSet="FastCast">
 				<body>Augur's Jaseran</body>
 			</set>
 			<set name="Max-INT" BaseSet="Casting">
@@ -147,57 +142,58 @@
 			<set name="Max-MND" BaseSet="Casting">
 				<lring>Star Ring</lring>
 				<legs>Augur's Brais</legs>
-				<hands>Teal Cuffs</hands>
+				<hands>Augur's Gloves</hands>
 				<feet>Estoqueur's Houseaux +1</feet>
 				<ammo>Clarus Stone</ammo>
+				<back>Estoqueur's Cape</back>
 			</set>
 			<set name="Enfeebling-INT" BaseSet="Max-INT">
 				<sub>Macero Grip</sub>
 				<neck>Spider Torque</neck>
+				<hands>Teal Cuffs</hands>
 				<legs>Augur's Brais</legs>
 				<feet>Sapientia Sabots</feet>
 				<lear>Helenus's Earring</lear>
 				<rear>Cassandra's Earring</rear>
 				<body>Warlock's Tabard</body>
+				<head>Duelist's Chapeau</head>
 			</set>
 			<set name="Enfeebling-MND" BaseSet="Max-MND">
 				<sub>Macero Grip</sub>
 				<neck>Spider Torque</neck>
+				<hands>Teal Cuffs</hands>
+				<legs>Augur's Brais</legs>
+				<feet>Sapientia Sabots</feet>
 				<lear>Helenus's Earring</lear>
 				<rear>Cassandra's Earring</rear>
 				<body>Warlock's Tabard</body>
-				<feet>Sapientia Sabots</feet>
+				<head>Duelist's Chapeau</head>
 			</set>
 			<set name="Elemental" BaseSet="Max-INT">
-				<!--<head>Warlock's Chapeau</head>
-				<body>Glamor Jupon</body>
-				<!--<hands>Zenith Mitts</hands>
-				<lring>Eremite's Ring</lring>
-				<rring>Eremite's Ring</rring>-->
+				<head>Warlock's Chapeau</head>
 				<sub>Elementa Grip</sub>
 				<legs>Duelist's Tights</legs>
 				<lear>Helenus's Earring</lear>
 				<rear>Cassandra's Earring</rear>
 				<feet>Augur's Gaiters</feet>
 				<neck>Elemental Torque</neck>
-				<!--<lear>Moldavite Earring</lear>
-				<back>Prism Cape</back>-->
 			</set>
 			<set name="Enhancing" BaseSet="Max-MND">
-				<!--<body>Glamor Jupon</body>-->
 				<sub>Raptor Strap +1</sub>
 				<hands>Duelist's Gloves</hands>
 				<legs>Warlock's Tights</legs>
+				<back>Estoqueur's Cape</back>
+				<feet>Estoqueur's Houseaux +1</feet>
 			</set>
 			<set name="Dark" BaseSet="Max-INT">
 				<main>$DarkStaff</main>
 				<sub>Caecus Grip</sub>
 				<feet>Augur's Gaiters</feet>
-				<!--<body>Glamor Jupon</body>-->
 			</set>
 			<set name="Healing" BaseSet="Max-MND">
 				<main>$LightStaff</main>
 				<sub>Raptor Strap +1</sub>
+				<body>Duelist's Tabard</body>
 				<hands>Augur's Gloves</hands>
 				<legs>Warlock's Tights</legs>
 			</set>
@@ -227,39 +223,36 @@
 			</action>
 		</if>
 		<if Skill="Elemental*">
-			<action type="equip" when="precast" set="Elemental" />
-			<action type="equip" when="precast">
+			<action type="equip" when="midcast" set="Elemental" />
+			<action type="equip" when="midcast">
 				<main>$%SpellElementStaff</main>
-				<sub>Raptor Strap +1</sub>
 			</action>
 		</if>
 		<if Skill="Enfeeb*">
 			<if type="BlackMagic">
-				<action type="equip" when="precast" set="Enfeebling-INT" />
+				<action type="equip" when="midcast" set="Enfeebling-INT" />
 			</if>
 			<elseif type="WhiteMagic">
-				<action type="equip" when="precast" set="Enfeebling-MND" />
+				<action type="equip" when="midcast" set="Enfeebling-MND" />
 			</elseif>
-			<action type="equip" when="precast">
+			<action type="equip" when="midcast">
 				<main>$%SpellElementStaff</main>
-				<sub>Raptor Strap +1</sub>
 			</action>
 		</if>
 		<if Skill="Enhancing*">
-			<action type="equip" when="precast" set="Enhancing" />
-			<action type="equip" when="precast">
+			<action type="equip" when="midcast" set="Enhancing" />
+			<action type="equip" when="midcast">
 				<main>$%SpellElementStaff</main>
-				<sub>Raptor Strap +1</sub>
 			</action>
 		</if>
 		<if Skill="Dark*">
-			<action type="equip" when="precast" set="Dark" />
+			<action type="equip" when="midcast" set="Dark" />
 		</if>
 		<if Skill="Healing*">
-			<action type="equip" when="precast" set="Healing" />
+			<action type="equip" when="midcast" set="Healing" />
 		</if>
 		<if Skill="Divine*">
-			<action type="equip" when="precast" set="Divine" />
+			<action type="equip" when="midcast" set="Divine" />
 		</if>
 		<!--<action type="equip" when="precast">
 			<sub>%SpellElement Grip</sub>
@@ -269,5 +262,6 @@
 			<action type="midcastdelay" delay="2" />
 		</if>
 		<action type="equip" when="aftercast" set="%Status" />
+		<action type="equip" when="precast" set="FastCast" />
 	</rules>
 </spellcast>
