@@ -121,15 +121,6 @@
 				<body>Duelist's Tabard</body>
 				<feet>Augur's Gaiters</feet>
 			</set>
-			<!--<set name="Enfeebling" BaseSet="Standard">
-				<head>Duelist's Chapeau</head>
-				<neck>Enfeebling Torque</neck>
-				<body>Warlock Tabard</body>
-				<rring>Tamas Ring</rring>
-				<hands>Duelist's Gloves</hands>
-				<back>Altruistic Cape</back>
-				<legs>Nashira Seraweels</legs>
-			</set>-->
 			<set name="Casting" BaseSet="FastCast">
 				<body>Augur's Jaseran</body>
 			</set>
@@ -204,6 +195,7 @@
 		</group>	
 	</sets>
 	<rules>
+		<action type="equip" when="aftercast" set="%Status" />
 		<action type="equip" when="resting" set="Resting" />
 		<action type="equip" when="idle" set="Standard" />
 		<action type="equip" when="engaged" set="Engaged">
@@ -223,12 +215,14 @@
 			</action>
 		</if>
 		<if Skill="Elemental*">
+			<action type="equip" when="precast" set="FastCast" />
 			<action type="equip" when="midcast" set="Elemental" />
 			<action type="equip" when="midcast">
 				<main>$%SpellElementStaff</main>
 			</action>
 		</if>
-		<if Skill="Enfeeb*">
+		<elseif Skill="Enfeeb*">
+			<action type="equip" when="precast" set="FastCast" />
 			<if type="BlackMagic">
 				<action type="equip" when="midcast" set="Enfeebling-INT" />
 			</if>
@@ -238,30 +232,32 @@
 			<action type="equip" when="midcast">
 				<main>$%SpellElementStaff</main>
 			</action>
-		</if>
-		<if Skill="Enhancing*">
+		</elseif>
+		<elseif Skill="Enhancing*">
+			<action type="equip" when="precast" set="FastCast" />
 			<action type="equip" when="midcast" set="Enhancing" />
 			<action type="equip" when="midcast">
 				<main>$%SpellElementStaff</main>
 			</action>
-		</if>
-		<if Skill="Dark*">
+		</elseif>
+		<elseif Skill="Dark*">
+			<action type="equip" when="precast" set="FastCast" />
 			<action type="equip" when="midcast" set="Dark" />
-		</if>
-		<if Skill="Healing*">
+		</elseif>
+		<elseif Skill="Healing*">
+			<action type="equip" when="precast" set="FastCast" />
 			<action type="equip" when="midcast" set="Healing" />
-		</if>
-		<if Skill="Divine*">
+		</elseif>
+		<elseif Skill="Divine*">
+			<action type="equip" when="precast" set="FastCast" />
 			<action type="equip" when="midcast" set="Divine" />
-		</if>
-		<!--<action type="equip" when="precast">
-			<sub>%SpellElement Grip</sub>
-		</action>-->
+		</elseif>
+		
+		
+		
 		<if Spell="Sneak" BuffActive="Sneak" advanced='"%SpellTargetName"="%PlayerName"'>
 			<action type="command" when="midcast">cancel 71</action>
 			<action type="midcastdelay" delay="2" />
 		</if>
-		<action type="equip" when="aftercast" set="%Status" />
-		<action type="equip" when="precast" set="FastCast" />
 	</rules>
 </spellcast>
