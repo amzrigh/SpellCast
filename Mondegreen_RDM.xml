@@ -134,7 +134,7 @@
 				<lring>Star Ring</lring>
 				<legs>Augur's Brais</legs>
 				<hands>Augur's Gloves</hands>
-				<feet>Estoqueur's Houseaux +1</feet>
+				<feet>Estoqueur's Houseaux +2</feet>
 				<ammo>Clarus Stone</ammo>
 				<back>Estoqueur's Cape</back>
 			</set>
@@ -174,7 +174,7 @@
 				<hands>Duelist's Gloves</hands>
 				<legs>Warlock's Tights</legs>
 				<back>Estoqueur's Cape</back>
-				<feet>Estoqueur's Houseaux +1</feet>
+				<feet>Estoqueur's Houseaux +2</feet>
 			</set>
 			<set name="Dark" BaseSet="Max-INT">
 				<main>$DarkStaff</main>
@@ -252,6 +252,11 @@
 			<action type="equip" when="precast" set="FastCast" />
 			<action type="equip" when="midcast" set="Divine" />
 		</elseif>
+		<if spell="Composure">
+			<equip when="precast">
+				<feet>Estoqueur's Houseaux +2</feet>
+			</equip>
+		</if>
 		
 		
 		

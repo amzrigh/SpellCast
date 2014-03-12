@@ -84,20 +84,20 @@
 		<group default="Yes" name="Default">
 			<set name="Standard|Idle">
 				<!--<sub>Raptor Strap +1</sub>-->
-				<main>Willow Wand</main>
+				<main>Yew Wand +1</main>
 				<ammo>Fortune Egg</ammo>
-				<head>Brass Hairpin +1</head>
+				<head>Destrier Beret</head>
 				<neck>Justice Badge</neck>
 				<lear>Energy Earring</lear>
 				<rear>Energy Earring</rear>
-				<body>Linen Robe</body>
+				<body>Chocobo Shirt</body>
 				<hands>Zealot's Mitts</hands>
 				<lring>Saintly Ring</lring>
 				<rring>Saintly Ring</rring>
 				<back>Mist Silk Cape</back>
 				<waist>Friar's Rope</waist>
-				<legs>Linen Slops</legs>
-				<feet>Light Soleas</feet>
+				<legs>Mage's Slacks</legs>
+				<feet>Mage's Sandals</feet>
 			</set>
 			<set name="Engaged" BaseSet="Standard">
 				<main>Ash Pole +1</main>
