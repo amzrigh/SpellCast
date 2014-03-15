@@ -17,70 +17,6 @@
 		<var name="ThunderStaff">Jupiter's Staff</var>
 	</variables>
 	<sets>
-		<!--<group default="Yes" name="Standard|Solo">
-			<set name="Standard|Idle">
-				<main>Earth Staff</main>
-				<sub>Raptor Strap +1</sub>
-				<ammo>Morion Tathlum</ammo>
-				<head>Warlock's Chapeau</head>
-				<neck>Holy Phial</neck>
-				<lear>Antivenom Earring</lear>
-				<rear>Morion Earring</rear>
-				<body>Warlock's Tabard</body>
-				<hands>Warlock's Gloves</hands>
-				<lring>Ether Ring</lring>
-				<rring>Saintly Ring</rring>
-				<back>Red Cape +1</back>
-				<waist>Penitent's Rope</waist>
-				<legs>Warlock's Tights</legs>
-				<feet>Warlock's Boots</feet>
-			</set>
-			<set name="Engaged" BaseSet="Standard">
-				<main>Royal Guard's Fleuret</main>
-				<sub>Balance Buckler</sub>
-				<rring>Courage Ring</rring>
-			</set>
-			<set name="Resting" BaseSet="Standard">
-				<main>$DarkStaff</main>
-				<waist>Reverend Sash</waist>
-				<!--<body>Errant Hpl.</body>
-				<rear>Antivenom Earring</rear>
-				<waist>Qiqirn Sash</waist>
-				<neck>Grandiose Chain</neck>
-				<back>Invigorating Cape</back>
-			</set>
-			<set name="Max-INT" BaseSet="Standard">
-				<neck>Black Neckerchief</neck>
-				<lring>Eremite's Ring</lring>
-				<rring>Eremite's Ring</rring>
-			</set>
-			<set name="Max-MND" BaseSet="Standard">
-				<lring>Saintly Ring</lring>
-				<rring>Saintly Ring</rring>
-			</set>
-			<set name="Enfeebling-INT" BaseSet="Max-INT">
-			</set>
-			<set name="Enfeebling-MND" BaseSet="Max-MND">
-			</set>
-			<set name="Elemental" BaseSet="Max-INT">
-				<body>Glamor Jupon</body>
-				<lear>Moldavite Earring</lear>
-			</set>
-			<set name="Enhancing" BaseSet="Max-MND">
-				<body>Glamor Jupon</body>
-			</set>
-			<set name="Dark" BaseSet="Max-INT">
-				<main>$DarkStaff</main>
-				<body>Glamor Jupon</body>
-			</set>
-			<set name="Healing" BaseSet="Max-MND">
-				<main>$LightStaff</main>
-			</set>
-			<set name="Divine" BaseSet="Max-MND">
-				<main>$LightStaff</main>
-				<lear>Moldavate Earring</lear>
-			</set>
-		</group>-->
 		<group default="Yes" name="Default">
 			<set name="Standard|Idle">
 				<main>$EarthStaff</main>
@@ -90,13 +26,13 @@
 				<neck>Holy Phial</neck>
 				<lear>Star Earring</lear>
 				<rear>Star Earring</rear>
-				<body>Duelist's Tabard</body>
+				<body>Estoqueur's Sayon +2</body>
 				<hands>Duelist's Gloves</hands>
 				<lring>Ether Ring</lring>
 				<rring>Hale Ring</rring>
 				<back>Estoqueur's Cape</back>
 				<waist>Penitent's Rope</waist>
-				<legs>Duelist's Tights</legs>
+				<legs>Estoqueur's Fuseau +1</legs>
 				<feet>Sapientia Sabots</feet>
 			</set>
 			<set name="Engaged" BaseSet="Standard">
@@ -106,7 +42,6 @@
 				<legs>Duelist's Tights</legs>
 				<back>Potentia Cape</back>
 				<rear>Suppanomimi</rear>
-				<body>Augur's Jaseran</body>
 				<back>Potentia Cape</back>
 			</set>
 			<set name="Resting" BaseSet="Standard">
@@ -123,10 +58,13 @@
 			</set>
 			<set name="Casting" BaseSet="FastCast">
 				<body>Augur's Jaseran</body>
+				<head>Estoqueur's Chappel +1</head>
 			</set>
 			<set name="Max-INT" BaseSet="Casting">
 				<neck>Philomath Stole</neck>
 				<lring>Snow Ring</lring>
+				<hands>Duelist's Gloves</hands>
+				<legs>Estoqueur's Fuseau +1</legs>
 				<feet>Augur's Gaiters</feet>
 				<back>Potentia Cape</back>
 			</set>
@@ -141,29 +79,28 @@
 			<set name="Enfeebling-INT" BaseSet="Max-INT">
 				<sub>Macero Grip</sub>
 				<neck>Spider Torque</neck>
-				<hands>Teal Cuffs</hands>
-				<legs>Augur's Brais</legs>
+				<hands>Estoqueur's Gantherots +1</hands>
 				<feet>Sapientia Sabots</feet>
 				<lear>Helenus's Earring</lear>
 				<rear>Cassandra's Earring</rear>
-				<body>Warlock's Tabard</body>
+				<body>Estoqueur's Sayon +2</body>
 				<head>Duelist's Chapeau</head>
 			</set>
 			<set name="Enfeebling-MND" BaseSet="Max-MND">
 				<sub>Macero Grip</sub>
 				<neck>Spider Torque</neck>
-				<hands>Teal Cuffs</hands>
-				<legs>Augur's Brais</legs>
+				<hands>Estoqueur's Gantherots +1</hands>
 				<feet>Sapientia Sabots</feet>
 				<lear>Helenus's Earring</lear>
 				<rear>Cassandra's Earring</rear>
-				<body>Warlock's Tabard</body>
+				<body>Estoqueur's Sayon +2</body>
 				<head>Duelist's Chapeau</head>
 			</set>
 			<set name="Elemental" BaseSet="Max-INT">
-				<head>Warlock's Chapeau</head>
+				<head>Estoqueur's Chappel +1</head>
+				<body>Estoqueur's Sayon +2</body>
 				<sub>Elementa Grip</sub>
-				<legs>Duelist's Tights</legs>
+				<legs>Estoqueur's Fuseau +1</legs>
 				<lear>Helenus's Earring</lear>
 				<rear>Cassandra's Earring</rear>
 				<feet>Augur's Gaiters</feet>
@@ -223,6 +160,9 @@
 		</if>
 		<elseif Skill="Enfeeb*">
 			<action type="equip" when="precast" set="FastCast" />
+			<action type="equip" when="precast">
+				<head>Estoqueur's Chappel +1</head>
+			</action>
 			<if type="BlackMagic">
 				<action type="equip" when="midcast" set="Enfeebling-INT" />
 			</if>
@@ -254,7 +194,13 @@
 		</elseif>
 		<if spell="Composure">
 			<equip when="precast">
+				<head>Estoqueur's Sayon +2</head>
 				<feet>Estoqueur's Houseaux +2</feet>
+			</equip>
+		</if>
+		<if spell="Saboteur">
+			<equip when="precast">
+				<hands>Estoqueur's Gantherots +1</hands>
 			</equip>
 		</if>
 		
