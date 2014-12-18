@@ -85,24 +85,24 @@
 			<set name="Standard|Idle">
 				<sub>Raptor Strap +1</sub>
 				<main>$EarthStaff</main>
-				<!--<sub>Frost Shield</sub>-->
-				<ammo>Morion Tathlum</ammo>
-				<head>Healer's Cap</head>
-				<neck>Holy Phial</neck>
-				<lear>Morion Earring</lear>
-				<rear>Antivenom Earring</rear>
-				<body>Bishop's Robe</body>
-				<hands>Mycophile Cuffs</hands>
-				<lring>Ether Ring</lring>
-				<rring>Hale Ring</rring>
+				<ammo>Phantom Tathlum</ammo>
+				<head>Cleric's Cap</head>
+				<neck>Healer's Torque</neck>
+				<lear>Star Earring</lear>
+				<rear>Star Earring</rear>
+				<body>Cleric's Briault</body>
+				<hands>Cleric's Mitts</hands>
+				<lring>Tamas Ring</lring>
+				<rring>Star Ring</rring>
 				<back>Red Cape +1</back>
-				<waist>Reverend Sash</waist>
+				<waist>Penitent's Rope</waist>
 				<legs>Healer's Pantaloons</legs>
 				<feet>Healer's Duckbills</feet>
 			</set>
 			<set name="Engaged" BaseSet="Standard">
 				<main>Blessed Hammer</main>
 				<sub>Frost Shield</sub>
+				<hands>Healer's Mitts</hands>
 				<!--<body>Warlock's Tabard</body>
 				<head>Warlock's Chapeau</head>
 				<feet>Warlock's Boots</feet>
@@ -146,12 +146,15 @@
 				<rring>Eremite's Ring</rring>-->
 			</set>
 			<set name="Max-MND" BaseSet="Casting">
+				<head>Healer's Cap</head>
 				<lring>Saintly Ring</lring>
 				<rring>Hale Ring</rring>
 			</set>
 			<set name="Enfeebling-INT" BaseSet="Max-INT">
+				<body>Healer's Briault</body>
 			</set>
 			<set name="Enfeebling-MND" BaseSet="Max-MND">
+				<body>Healer's Briault</body>
 			</set>
 			<set name="Elemental" BaseSet="Max-INT">
 				<!--<head>Warlock's Chapeau</head>
@@ -174,6 +177,7 @@
 			</set>
 			<set name="Healing" BaseSet="Max-MND">
 				<main>$LightStaff</main>
+				<hands>Healer's Mitts</hands>
 				<!--<sub>Raptor Strap +1</sub>-->
 			</set>
 			<set name="Divine" BaseSet="Max-MND">
@@ -191,7 +195,7 @@
 			<hands lock="t" />
 			<feet lock="t" />
 		</action>
-		<if TPGT="25">
+		<if TPGT="300">
 			<action type="Disable" Slot="Main|Sub|Ranged" />
 		</if>
 		<else>

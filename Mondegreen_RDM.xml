@@ -32,7 +32,7 @@
 				<rring>Hale Ring</rring>
 				<back>Estoqueur's Cape</back>
 				<waist>Penitent's Rope</waist>
-				<legs>Estoqueur's Fuseau +1</legs>
+				<legs>Estoqueur's Fuseau +2</legs>
 				<feet>Sapientia Sabots</feet>
 			</set>
 			<set name="Engaged" BaseSet="Standard">
@@ -58,13 +58,13 @@
 			</set>
 			<set name="Casting" BaseSet="FastCast">
 				<body>Augur's Jaseran</body>
-				<head>Estoqueur's Chappel +1</head>
+				<head>Estoqueur's Chappel +2</head>
 			</set>
 			<set name="Max-INT" BaseSet="Casting">
 				<neck>Philomath Stole</neck>
 				<lring>Snow Ring</lring>
 				<hands>Duelist's Gloves</hands>
-				<legs>Estoqueur's Fuseau +1</legs>
+				<legs>Estoqueur's Fuseau +2</legs>
 				<feet>Augur's Gaiters</feet>
 				<back>Potentia Cape</back>
 			</set>
@@ -79,7 +79,7 @@
 			<set name="Enfeebling-INT" BaseSet="Max-INT">
 				<sub>Macero Grip</sub>
 				<neck>Spider Torque</neck>
-				<hands>Estoqueur's Gantherots +1</hands>
+				<hands>Estoqueur's Gantherots +2</hands>
 				<feet>Sapientia Sabots</feet>
 				<lear>Helenus's Earring</lear>
 				<rear>Cassandra's Earring</rear>
@@ -89,7 +89,7 @@
 			<set name="Enfeebling-MND" BaseSet="Max-MND">
 				<sub>Macero Grip</sub>
 				<neck>Spider Torque</neck>
-				<hands>Estoqueur's Gantherots +1</hands>
+				<hands>Estoqueur's Gantherots +2</hands>
 				<feet>Sapientia Sabots</feet>
 				<lear>Helenus's Earring</lear>
 				<rear>Cassandra's Earring</rear>
@@ -97,10 +97,10 @@
 				<head>Duelist's Chapeau</head>
 			</set>
 			<set name="Elemental" BaseSet="Max-INT">
-				<head>Estoqueur's Chappel +1</head>
+				<head>Estoqueur's Chappel +2</head>
 				<body>Estoqueur's Sayon +2</body>
 				<sub>Elementa Grip</sub>
-				<legs>Estoqueur's Fuseau +1</legs>
+				<legs>Estoqueur's Fuseau +2</legs>
 				<lear>Helenus's Earring</lear>
 				<rear>Cassandra's Earring</rear>
 				<feet>Augur's Gaiters</feet>

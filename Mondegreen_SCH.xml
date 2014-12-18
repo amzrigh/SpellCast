@@ -87,11 +87,11 @@
 				<main>Yew Wand +1</main>
 				<ammo>Fortune Egg</ammo>
 				<head>Destrier Beret</head>
-				<neck>Justice Badge</neck>
+				<neck>Holy Phial</neck>
 				<lear>Energy Earring</lear>
 				<rear>Energy Earring</rear>
 				<body>Chocobo Shirt</body>
-				<hands>Zealot's Mitts</hands>
+				<hands>Mycophile Cuffs</hands>
 				<lring>Saintly Ring</lring>
 				<rring>Saintly Ring</rring>
 				<back>Mist Silk Cape</back>
@@ -133,14 +133,13 @@
 				<legs>Nashira Seraweels</legs>
 			</set>-->
 			<set name="Casting" BaseSet="Standard">
-				<main>Willow Wand</main>
+				<main>Yew Wand +1</main>
 				<!--<sub>Pelte</sub>
 				<!--<head>Warlock's Chapeau</head>
 				<body>Warlock's Tabard</body>-->
 			</set>
 			<set name="Max-INT" BaseSet="Casting">
-				<!--<neck>Black Silk Neckerchief</neck>-->
-				<hands>Linen Cuffs</hands>
+				<neck>Black Silk Neckerchief</neck>
 				<lring>Eremite's Ring</lring>
 				<rring>Eremite's Ring</rring>
 			</set>
